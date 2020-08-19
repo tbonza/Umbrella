@@ -12,9 +12,4 @@ function example1(text::Array{String,1}, regexes::Array{Regex,1})::Bool
     return true
 end
 
-function __init__()
-    regexes = [Regex(i) for i in readlines("yelp_example.regex")]
-    text = readlines("yelp_example.txt")
-end
-
 end # module
