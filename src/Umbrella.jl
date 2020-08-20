@@ -2,7 +2,7 @@ module Umbrella
 
 using Distributed
 
-export example1, regexes, text
+export example1, dist_example2
 
 function example1(text::Array{String,1}, regexes::Array{Regex,1})::Bool
     for t in text
