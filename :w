@@ -1,0 +1,4 @@
+# Umbrella
+
+Example Julia package for [tbonza/helloJulia](https://github.com/tbonza/helloJulia). Includes
+examples of a *serial algorithm*, `example1()`, and a *parallel algorithm* with 
