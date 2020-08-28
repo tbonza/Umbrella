@@ -1,9 +1,8 @@
 module Umbrella
 
 using Distributed
-using Threads
 
-export example1, dist_example2
+export example1, dist_example2, example3
 
 function example1(text::Array{String,1}, regexes::Array{Regex,1})::Bool
     for t in text
@@ -28,7 +27,7 @@ function dist_example2(text::Array{String,1}, regexes::Array{Regex,1}, batch::In
 end
 
 function example3(text::Array{String,1}, regexes::Array{Regex,1})::Bool
-    @threads for t in text
+    Threads.@threads for t in text
         for r in regexes
             if occursin(r,t)
             end
